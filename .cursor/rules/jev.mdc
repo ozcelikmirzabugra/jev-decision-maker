@@ -1,0 +1,31 @@
+---
+description: Jev — her anlamlı görevde TypeSafe Jev modeline hangi modelin kullanılacağını sorar
+globs:
+alwaysApply: true
+---
+
+# Jev — karar zekâsı (Cursor)
+
+> "Kota tasarrufu, hız ve sonuç kalitesini işte bu karar zekâ halletti."
+
+Kararı sen vermiyorsun; **TypeSafe Jev modeli veriyor**. Cursor'da model seçimi kullanıcının elinde, bu yüzden görevin Jev'in kararını almak ve kullanıcıya net şekilde iletmek.
+
+## Ne zaman
+
+Yeni ve anlamlı büyüklükte her görevin başında. Kısa sorulara, tek satırlık düzeltmelere ve devam eden bir görevin ara adımlarına sorma.
+
+## Nasıl
+
+1. Terminalde çalıştır:
+   ```bash
+   python3 .jev/jev_route.py "<görevin tek paragraflık özeti>"
+   ```
+   Özete yalnızca görevin kendisini yaz; kod ya da konuşma geçmişi ekleme.
+2. Çıktıdaki karar kartını kod bloğu içinde aynen göster.
+3. Kartı şu anki modelle karşılaştır:
+   - Model uygunsa hemen işe başla.
+   - Şu anki model daha güçlüyse: `💸 Jev: Bu iş için <model> yeterli, kota tasarrufu için geçebilirsin.` yaz ve işe devam et.
+   - Şu anki model daha zayıfsa ve kart 🧠 Derin ya da 🏛️ Usta diyorsa: `⬆️ Jev: Bu iş için <model> öneriyorum, geçtikten sonra devam edelim.` yaz; yalnızca planı çıkar, kod değiştirme.
+4. Komut hata verirse (anahtar yok, ağ yok) bunu tek satırla belirt ve işe devam et.
+
+Cursor model eşleştirmesi: haiku → hızlı/ucuz model veya Auto · sonnet → Sonnet · opus → Opus (thinking açık) · fable → en güçlü model, gerekirse Max Mode.
